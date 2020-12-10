@@ -1,0 +1,99 @@
+:root {
+  --darker-night: rgb(36, 41, 51);
+  --dark-night: rgb(46, 52, 64);
+  --snow-storm: rgb(236, 239, 244) ;
+  --red-aurora: rgb(191, 97, 106);
+  --green-aurora: rgb(55, 157, 101);
+
+  font-size: 10px;
+  font-family: Rubik, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--snow-storm);
+  background-color: var(--darker-night);
+}
+
+main {
+  background-color: var(--dark-night);
+  max-width: 60rem;
+  margin: 5rem auto;
+  padding: .5rem;
+  border-radius: 1rem;
+}
+
+@media(min-width: 500px) {
+  main {
+    padding: 2rem;
+  }
+}
+
+#title,
+#description {
+  text-align: center;
+}
+
+/* Form */
+
+input,
+select {
+  color: var(--dark-night);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="submit"],
+textarea,
+select {
+  width: 100%;
+}
+
+textarea {
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+.form-group {
+  margin: 3rem 2rem;
+}
+
+.prompt {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.prompt.required::after {
+  content: " *";
+  color: var(--red-aurora);
+}
+
+.prompt span {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.option {
+  margin-bottom: 1rem;
+}
+
+.submit-btn {
+  height: 4rem;
+  background-color: var(--green-aurora);
+  color: var(--snow-storm);
+  border: 0;
+  border-radius: .4rem;
+}
+
+.submit-btn:hover {
+  background-color: var(--red-aurora);
+  cursor: pointer;
+}
